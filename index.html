@@ -12,9 +12,11 @@
 </head>
 <body>
 
-    <div id="app">
-        <h1>{{message}}</h1>
-        <img :src="'img/${mongolfiera}'" alt="mongolfiera">
+    <div id="app" class="container">
+        <h1 class="title">{{message}}</h1>
+        <div class="box">
+            <img :src="`img/${image}`" alt="mongolfiera">
+        </div>
     </div>
     <script>
         const { createApp } = Vue
@@ -23,7 +25,8 @@
           data() {
             return {
               message: 'Ciao a tutti!',
-              mongolfiera:'mongolfiera.jpg',
+              image:'mongolfiera.jpg',
+              //title:`red title`//
             }
           }
         }).mount('#app')
